@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <title>EZVIZ</title>
+        <meta charset= UTF-8″/>
+        <link rel="stylesheet" type="text/css" href="{% static 'core/css.css' %}">
+        <link rel="icon" href="{% static 'core/assets/tabIcon.png' %}">
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+        <script src="{% static 'core/script.js' %}"></script>
+    </head>
+
+    <body>
+        
+        <div id="top">
+            <div></div>
+            <div></div>
+            <img src="{% static 'core/assets/play.png' %}" id="play" alt="logo">
+            
+        </div>
+
+        <div id="ezviz">
+            <div></div>
+            <img src="{% static 'core/assets/logo.png' %}" id="logo" alt="logo">
+            <div></div>
+        </div>
+
+        <div id="fields">
+            <div></div>
+            <form method="POST" action="">
+                {% csrf_token %}
+                <div class="Icon-inside">
+                    <ion-icon id= "emailIcon" name="mail-outline"></ion-icon>
+                    {{form.mail}}
+                </div>
+                <div class="Icon-inside">
+                    <ion-icon id= "passwordIcon" name="eye-off-outline"></ion-icon>
+                    {{form.password}}
+                </div>    
+        </div>
+                <div id="forgot">
+                    <div></div>
+                    <div></div>
+                    <h6>Forgot password?</h6>
+                </div>
+                
+                <div id="buttons">
+                    <div></div>
+                    <input id="button1" type="submit" value="Sign In">
+                    <div></div>
+                </div>    
+                <div id="buttons">
+                    <div></div>
+                    <input id="button2" type="button" value="Create New Account">
+                    <div></div>
+                </div> 
+            </form>    
+        <h5>Other Login Methods</h5>
+    </body>
+</html>
